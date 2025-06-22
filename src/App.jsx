@@ -1,58 +1,29 @@
+import React from "react";
+import Search from "./components/Search";
 import { useState } from "react";
-import "./App.css";
-
-const Card = ({ title }) => {
-	const [hasLiked, setHasLiked] = useState(false);
-
-	return (
-		<div className="card">
-			<h2>{title}</h2>
-
-			<button
-				onClick={() => {
-					setHasLiked(!hasLiked);
-				}}
-			>
-				{hasLiked ? "❤️" : "🤍"}
-			</button>
-		</div>
-	);
-};
 
 const App = () => {
+	const [searchTerm, setSearchTerm] = useState("");
+
 	return (
-		<div className="card-container">
-			<Card
-				title="Star Wars"
-				rating={5}
-				isCool={true}
-				actors={[
-					{ name: "Mark Hamill" },
-					{ name: "Harrison Ford" },
-					{ name: "Carrie Fisher" },
-				]}
-			/>
-			<Card
-				title="Avatar"
-				rating={4}
-				isCool={true}
-				actors={[
-					{ name: "Sam Worthington" },
-					{ name: "Zoe Saldana" },
-					{ name: "Sigourney Weaver" },
-				]}
-			/>
-			<Card
-				title="The Lion King"
-				rating={5}
-				isCool={true}
-				actors={[
-					{ name: "Matthew Broderick" },
-					{ name: "James Earl Jones" },
-					{ name: "Jeremy Irons" },
-				]}
-			/>
-		</div>
+		<main>
+			<div className="pattern" />
+			<div className="wrapper">
+				<header>
+					<img src="./hero.png" alt="Logo" />
+					<h1>
+						Find <span className="text-gradient">Movies</span>{" "}
+						You'll Enjoy Without the Hassle
+					</h1>
+				</header>
+
+				<Search searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
+			</div>
+
+			<h1 className="text-3xl font-bold underline">
+				Hello Vite + React + Tailwind CSS!
+			</h1>
+		</main>
 	);
 };
 
