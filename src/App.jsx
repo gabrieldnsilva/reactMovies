@@ -2,13 +2,7 @@ import './App.css'
 
 const Card = ( {title}) => {
   return (
-    <div style={{
-      border: '1px solid #4b5362',
-      padding: '20px',
-      margin: '10px',
-      backgroundColor: '#31363f',
-      
-    }}>  
+    <div className='card'>  
       <h2>{title}</h2>
     </div>
   )
@@ -17,9 +11,9 @@ const Card = ( {title}) => {
 const App = () => {
   return (
     <div className='card-container'>
-      <Card title="Movie 1" />
-      <Card title="Movie 2" />
-      <Card title="Movie 3" />
+      <Card title="Star Wars" rating={5} isCool={true} actors={[{name: 'Mark Hamill'}, {name: 'Harrison Ford'}, {name: 'Carrie Fisher'}]} />
+      <Card title="Avatar" rating={4} isCool={true} actors={[{name: 'Sam Worthington'}, {name: 'Zoe Saldana'}, {name: 'Sigourney Weaver'}]} />
+      <Card title="The Lion King" rating={5} isCool={true} actors={[{name: 'Matthew Broderick'}, {name: 'James Earl Jones'}, {name: 'Jeremy Irons'}]} />
     </div>
   )
 }

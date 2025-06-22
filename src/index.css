@@ -25,3 +25,16 @@ h2 {
   max-width: 1024px;
   margin: 0 auto;
 }
+
+.card {
+      border: 2px solid red;
+      padding: 20px;
+      margin: 10px;
+      background-color: #31363f;
+      border-radius: 10px;
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    
+}
